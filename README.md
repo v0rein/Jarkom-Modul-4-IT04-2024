@@ -53,6 +53,7 @@
 | Total       |                                                                                                 | 4263      | /19     |
 
 ## Subnetting GNS - Metode VLSM
+![SUBNETTING VLSM](https://github.com/user-attachments/assets/fa775a86-1cd2-470c-ba77-ea8373b80240)
 
 ## Subnetting CPT - Metode CIDR
 
