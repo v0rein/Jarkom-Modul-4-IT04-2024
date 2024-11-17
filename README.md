@@ -58,6 +58,12 @@
 
 ![CIDR TREE](assets/tree-cidr.png)
 
+### Tree VLSM
+![Screenshot 2024-11-17 221945](https://github.com/user-attachments/assets/a321efeb-f56b-4902-8737-ae3cb844f4fc)
+
+### Pembagian IP VLSM
+![image](https://github.com/user-attachments/assets/1f3b1c55-7145-4cd8-9b1b-daf36d97757b)
+
 ### Penggabungan Subnet
 
 ![Gabung1](assets/gabung1.png)
