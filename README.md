@@ -56,7 +56,7 @@
 
 ### Tree CIDR
 
-![CIDR TREE](assets/tree-cidr.drawio.png)
+![CIDR TREE](assets/tree-cidr.png)
 
 ### Penggabungan Subnet
 
