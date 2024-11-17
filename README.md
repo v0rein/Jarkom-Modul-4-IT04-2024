@@ -19,6 +19,8 @@
 ## Topologi
 
 #### Topologi GNS3 VLSM
+![image](https://github.com/user-attachments/assets/8b217f00-b0d6-43a9-a32d-894dfd92af81)
+
 
 #### Topologi CPT CIDR
 
