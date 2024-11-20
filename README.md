@@ -928,3 +928,57 @@ ip route 0.0.0.0 0.0.0.0 192.235.194.129
 ip route 192.235.194.64 255.255.255.248 192.235.194.130
 do write
 ```
+### Konfigurasi VLSM
+#### Hololive
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet dhcp
+
+# A1 > HoloID
+auto eth1
+iface eth1 inet static
+    address 192.235.19.72
+    netmask 255.255.255.252
+
+# A8 > HoloJP
+auto eth2
+iface eth2 inet static
+    address 192.235.19.88
+    netmask 255.255.255.252
+
+# A15 > HoloEN
+auto eth3
+iface eth3 inet static
+    address 192.235.19.96
+    netmask 255.255.255.252
+```
+#### HoloID
+```
+# A1 > Hololive
+auto eth0
+iface eth0 inet static
+    address 192.235.19.72
+    netmask 255.255.255.252
+    gateway 192.239.19.73
+
+# A2 > Holoro
+auto eth1
+iface eth1 inet static
+    address 192.235.19.76
+    netmask 255.255.255.252
+
+# A4 > Area15
+auto eth2
+iface eth2 inet static
+    address 192.235.19.80
+    netmask 255.255.255.252
+
+# A6 > Holoh3ro
+auto eth3
+iface eth3 inet static
+    address 192.235.19.84
+    netmask 255.255.255.252
+```
