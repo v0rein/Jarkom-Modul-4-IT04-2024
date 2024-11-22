@@ -928,7 +928,7 @@ ip route 0.0.0.0 0.0.0.0 192.235.194.129
 ip route 192.235.194.64 255.255.255.248 192.235.194.130
 do write
 ```
-### Konfigurasi VLSM
+## Konfigurasi VLSM
 #### Hololive
 ```
 auto lo
@@ -981,4 +981,466 @@ auto eth3
 iface eth3 inet static
     address 192.235.19.84
     netmask 255.255.255.252
+```
+#### Holoro
+```
+# A2 > HoloID
+auto eth0
+iface eth0 inet static
+    address 192.239.19.76
+    netmask 255.255.255.252
+    gateway 192.235.19.77
+
+# A3 > Switch7 > Ollie / Anya / Reine
+auto eth1
+iface eth1 inet static
+    address 192.235.8.0
+    netmask 255.255.252.0
+```
+##### Ollie 
+```
+auto eth0
+iface eth0 inet static
+    address 192.235.8.0
+    netmask 255.255.252.0
+    gateway 192.235.8.1
+```
+##### Anya
+```
+auto eth0
+iface eth0 inet static
+    address 192.235.8.1
+    netmask 255.255.252.0
+     gateway 192.235.8.1
+```
+##### Reine
+```
+auto eth0
+iface eth0 inet static
+    address 192.235.8.2
+    netmask 255.255.252.0
+    gateway 192.235.8.1
+```
+### Area15
+```
+# A4 > HoloID
+auto eth0
+iface eth0 inet static
+    address 192.235.19.78
+    netmask 255.255.255.252
+    broadcast 192.235.19.79
+
+# A5 > Switch6 > Moona / Risu / Iofi
+auto eth1
+iface eth1 inet static
+    address 192.235.19.108
+    netmask 255.255.252.0
+    broadcast 192.235.19.143
+```
+#### Moona
+```
+# A5 > Switch6 > Moona / Risu / Iofi
+auto eth1
+iface eth1 inet static
+    address 192.235.19.109
+    netmask 255.255.252.0
+    broadcast 192.235.19.143
+```
+#### Risu
+```
+# A5 > Switch6 > Moona / Risu / Iofi
+auto eth1
+iface eth1 inet static
+    address 192.235.19.110
+    netmask 255.255.252.0
+    broadcast 192.235.19.143
+```
+#### lofi
+```
+# A5 > Switch6 > Moona / Risu / Iofi
+auto eth1
+iface eth1 inet static
+    address 192.235.19.111
+    netmask 255.255.252.0
+    broadcast 192.235.19.143
+```
+### Holoh3ro
+```
+# A6 > HoloID
+auto eth0
+iface eth0 inet static
+    address 192.235.18.192
+    netmask 255.255.255.192
+    gateway 192.235.18.193
+
+# A7 > Switch8 > Zeta / Kaela / Kobo
+auto eth1
+iface eth1 inet static
+    address 192.235.16.0
+    netmask 255.255.254.0
+```
+#### Zeta
+```
+# A7 > Switch8 > Zeta / Kaela / Kobo
+auto eth1
+iface eth1 inet static
+    address 192.235.16.1
+    netmask 255.255.254.0
+    gateway 192.239.16.1
+```
+#### Kaela
+```
+# A7 > Switch8 > Zeta / Kaela / Kobo
+auto eth1
+iface eth1 inet static
+    address 192.235.16.2
+    netmask 255.255.254.0
+    gateway 192.239.16.1
+```
+#### Kobo
+```
+# A7 > Switch8 > Zeta / Kaela / Kobo
+
+auto eth1
+iface eth1 inet static
+    address 192.235.16.3
+    netmask 255.255.254.0
+    gateway 192.239.16.1
+```
+### HoloJP
+```
+# A8 > Hololive
+auto eth0
+iface eth0 inet static
+    address 192.235.19.88
+    netmask 255.255.255.252
+    gateway 192.235.19.89
+
+# A9 > Switch1 > DEV_IS / GEN:0
+auto eth1
+iface eth1 inet static
+    address 192.235.19.48
+    netmask 255.255.255.248
+```
+### DEV_IS
+```
+# A9 > HoloJP
+auto eth0
+iface eth0 inet static
+    address 192.235.19.48
+    netmask 255.255.255.248
+    gateway 192.235.19.49
+
+# A10 > Switch2 > Re:Gloss > Ririka_Raden / Ao / Hajime_Kanade
+auto eth1
+iface eth1 inet static
+    address 192.235.19.32
+    netmask 255.255.255.240
+```
+#### Ririka_Raden
+```
+# A10 > Switch2 > Re:Gloss > Ririka_Raden / Ao / Hajime_Kanade
+auto eth1
+iface eth1 inet static
+    address 192.235.19.32
+    netmask 255.255.255.240
+    gateaway 192.235.19.33
+```
+#### Ao
+```
+# A10 > Switch2 > Re:Gloss > Ririka_Raden / Ao / Hajime_Kanade
+auto eth1
+iface eth1 inet static
+    address 192.235.19.33
+    netmask 255.255.255.240
+    gateaway 192.235.19.33
+```
+#### Hajime_Kanade
+```
+# A10 > Switch2 > Re:Gloss > Ririka_Raden / Ao / Hajime_Kanade
+auto eth1
+iface eth1 inet static
+    address 192.235.19.34
+    netmask 255.255.255.240
+    gateaway 192.235.19.33
+```
+### GEN:0 
+```
+# A9 > HoloJP
+auto eth0
+iface eth0 inet static
+    address 192.235.19.48
+    netmask 255.255.255.248
+    gateway 192.235.19.49
+
+# A11 > Switch3 > MiComet / Sora_Robo_AZK / GEN:1
+auto eth1
+iface eth1 inet static
+    address 192.235.0.0
+    netmask 255.255.248.0
+```
+#### MiComet
+```
+# A11 > Switch3 > MiComet / Sora_Robo_AZK / GEN:1
+auto eth1
+iface eth1 inet static
+    address 192.235.0.0
+    netmask 255.255.248.0
+    gateway 192.239.0.1
+```
+#### Sora_Robo_AZK
+```
+# A11 > Switch3 > MiComet / Sora_Robo_AZK / GEN:1
+auto eth1
+iface eth1 inet static
+    address 192.235.0.0
+    netmask 255.255.248.0
+    gateway 192.239.0.1
+```
+### GEN:1 
+```
+# A11 > GEN:0
+auto eth0
+iface eth0 inet static
+    address 192.235.0.0
+    netmask 255.255.248.0
+    gateway 192.239.0.1
+
+# A12 > Switch4 > FBKK_Matsuri / Aki_Haachama
+auto eth1
+iface eth1 inet static
+    address 192.235.14.0
+    netmask 255.255.254.0
+
+# A13 > Switch5 > GAMERS
+auto eth2
+iface eth2 inet static
+    address 192.235.19.92
+    netmask 255.255.255.252
+```
+#### FBK_Matsuri
+```
+# A12 > Switch Member
+auto eth0
+iface eth0 inet static
+    address 192.235.14.0
+    netmask 255.255.254.0
+    gateway 192.239.14.1
+```
+#### Aki_Hachama
+```
+# A12 > Switch Member
+auto eth0
+iface eth0 inet static
+    address 192.235.14.0
+    netmask 255.255.254.0
+    gateway 192.239.14.1
+```
+### GAMERS
+```
+# A13 > GEN:1
+auto eth0
+iface eth0 inet static
+    address 192.235.19.92
+    netmask 255.255.255.252
+    gateway 192.235.19.93
+
+# A14 > Fubuki / Korone / Okayu / Mio
+auto eth1
+iface eth1 inet static
+    address 192.235.18.0
+    netmask 255.255.255.128
+```
+#### Korone
+```
+# A14 > GAMERS
+auto eth0
+iface eth0 inet static
+    address 192.239.18.1
+    netmask 255.255.255.128
+    gateway 192.239.18.1
+```
+#### Okayu
+```
+# A14 > GAMERS
+auto eth0
+iface eth0 inet static
+    address 192.239.18.1
+    netmask 255.255.255.128
+    gateway 192.239.18.1
+```
+#### Mio
+```
+# A14 > GAMERS
+auto eth0
+iface eth0 inet static
+    address 192.239.18.1
+    netmask 255.255.255.128
+    gateway 192.239.18.1
+```
+### HoloEN
+```
+# A15 > Hololive
+auto eth0
+iface eth0 inet static
+    address 192.235.19.96
+    netmask 255.255.255.252
+    gateway 1192.235.19.97
+
+# A16 > HoloAdvent
+auto eth1
+iface eth1 inet static
+    address 192.235.19.100
+    netmask 255.255.255.252
+
+# A18 > HoloMyth
+auto eth2
+iface eth2 inet static
+    address 192.235.19.104
+    netmask 255.255.255.252
+```
+### HoloAdvent
+```
+# A16 > HoloEN
+auto eth0
+iface eth0 inet static
+    address 192.235.19.100
+    netmask 255.255.255.252
+    gateway 192.235.19.101
+
+# A17 > Switch5 > FuwaMoco / Shiori_Nerissa / Biboo
+auto eth1
+iface eth1 inet static
+    address 192.235.19.0
+    netmask 255.255.255.224
+```
+#### FuwaMoco
+```
+# A17 > HoloAdvent
+auto eth0
+iface eth0 inet static
+     address 192.235.19.1
+    netmask 255.255.255.224
+    gateway 192.239.19.1
+```
+#### Shiori_Nerissa
+```
+# A17 > HoloAdvent
+auto eth0
+iface eth0 inet static
+     address 192.235.19.2
+    netmask 255.255.255.224
+    gateway 192.239.19.1
+```
+#### Biboo
+```
+# A17 > HoloAdvent
+auto eth0
+iface eth0 inet static
+     address 192.235.19.1
+    netmask 255.255.255.224
+    gateway 192.239.19.1
+```
+### HoloMyth
+```
+# A18 > HoloEN
+auto eth0
+iface eth0 inet static
+    address 192.235.19.104
+    netmask 255.255.255.252
+    gateway 192.235.19.105
+
+# A19 > Switch2 > Gura_Ame_Ina / Kiara_Calli
+auto eth1
+iface eth1 inet static
+    address 192.235.12.0
+    netmask 255.255.254.0
+
+# A20 > Project-Hope / Holo-Council
+auto eth2
+iface eth2 inet static
+    address 192.235.19.56
+    netmask 255.255.255.248
+```
+#### Gura_Ame_Ina
+```
+# A19 > HoloMyth
+auto eth0
+iface eth0 inet static
+    address 192.235.12.1
+    netmask 255.255.254.0
+    gateway 192.234.14.1
+```
+#### Kiara_Calli
+```
+# A19 > HoloMyth
+auto eth0
+iface eth0 inet static
+    address 192.235.12.2
+    netmask 255.255.254.0
+    gateway 192.234.14.1
+```
+### ProjectHope
+```
+# A20 > HoloMyth
+auto eth0
+iface eth0 inet static
+   address 192.235.19.56
+    netmask 255.255.255.248
+    gateway 192.235.19.57
+
+# A21 > Switch7 > Irys
+auto eth1
+iface eth1 inet static
+    address 192.235.19.64
+    netmask 255.255.255.248
+```
+#### Irys
+```
+# A21 > Project-Hope
+auto eth0
+iface eth0 inet static
+    address 192.235.19.64
+    netmask 255.255.255.248
+    gateway 192.235.19.65
+```
+### HoloCouncill
+```
+# A20 > Project-Hope
+auto eth0
+iface eth0 inet static
+    address 192.235.19.56
+    netmask 255.255.255.248
+    gateway 192.235.19.49
+
+# A20 > HoloMyth
+auto eth1
+iface eth1 inet static
+    address 192.235.19.57
+    netmask 255.255.255.248
+    gateway 192.235.19.52
+
+# A22 > Switch4 > Kronii_Mumei / Bae_Fauna
+auto eth2
+iface eth2 inet static
+    address 192.235.18.130
+    netmask 255.255.255.192
+```
+#### Kronii_Mumei
+```
+# A22 > HoloCouncil
+auto eth0
+iface eth0 inet static
+    address  192.235.18.128
+    netmask 255.255.255.192
+    gateway 192.235.18.129
+```
+#### Bae_Fauna
+```
+# A22 > HoloCouncil
+auto eth0
+iface eth0 inet static
+    address 192.235.18.128
+    netmask 255.255.255.192
+    gateway 192.235.18.129
 ```
